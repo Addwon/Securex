@@ -11,9 +11,12 @@
 </head>
 <body>
     <th:block th:replace="base :: nav"></th:block>
-    <div class="alert alert-info" role="alert">
+
+    <div class="alert alert-success fade in">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <!--<strong>Success!</strong> Your message has been sent successfully.-->
         <div sec:authorize="isAuthenticated()">
-            Welcome,  <span sec:authentication="name">Username</span>
+            Welcome,  <span sec:authentication="name">username</span>
         </div>
     </div>
 
